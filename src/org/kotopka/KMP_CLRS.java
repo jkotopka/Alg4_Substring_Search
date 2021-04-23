@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * {@code KMP_CLRS} - Version of the Knuth-Morris-Pratt string pattern matching algorithm
- * from <a href="https://mitpress.mit.edu/books/introduction-algorithms-third-edition"></a>Introduction to Algorithms 3rd ed.</a>
+ * from <a href="https://mitpress.mit.edu/books/introduction-algorithms-third-edition">Introduction to Algorithms 3rd ed.</a>
  */
 public class KMP_CLRS {
 
