@@ -1,9 +1,12 @@
 package org.kotopka;
 
+/**
+ * {@code KMP} - Knuth-Morris-Pratt substring search method from <a href="https://algs4.cs.princeton.edu/home/">Algorithms 4th ed.</a>
+ */
 public class KMP {
 
-    private String pat;
-    private int[][] dfa;
+    private final String pat;
+    private final int[][] dfa;
 
     public KMP(String pat) {
         this.pat = pat;
@@ -16,13 +19,13 @@ public class KMP {
             for (int c = 0; c < R; c++) {
                 dfa[c][j] = dfa[c][x];
             }
-            dfa[pat.charAt(j)][j] = j + 1;
+            dfa[pat.charAt(j)][j] = j + 1; // character match state transition
             x = dfa[pat.charAt(j)][x];
         }
     }
 
     public int search(String txt) {
-        // simulate operation of dfa  on txt
+        // simulate operation of dfa on txt
         int i, j, n = txt.length(), m = pat.length();
         for (i = 0, j = 0; i < n && j < m; i++) {
             j = dfa[txt.charAt(i)][j];
