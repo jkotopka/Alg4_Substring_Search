@@ -33,6 +33,8 @@ public class KMP_CLRS {
         int[] pi = new int[m];
         int k = 0;
 
+        // https://www.youtube.com/watch?v=V5-7GzOfADQ
+
         for (int q = 1; q < m; q++) {
             while (k > 0 && P.charAt(k) != P.charAt(q)) {
                 k = pi[k - 1];
@@ -48,8 +50,12 @@ public class KMP_CLRS {
 
     public static void main(String[] args) {
         KMP_CLRS k = new KMP_CLRS();
-//        System.out.println(Arrays.toString(k.computePrefix("ababaca")));
+        System.out.println("ababaca " + Arrays.toString(k.computePrefix("ababaca")));
+
+        System.out.println("needle " + Arrays.toString(k.computePrefix("needle")));
         k.matcher("haystackneedleina", "needle");
+
+        System.out.println("abaca " + Arrays.toString(k.computePrefix("abaca")));
         k.matcher("aabacabbcdeabacaqq", "abaca");
     }
 
