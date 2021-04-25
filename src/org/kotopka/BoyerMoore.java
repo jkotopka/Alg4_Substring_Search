@@ -1,5 +1,11 @@
 package org.kotopka;
 
+/**
+ * {@code BoyerMoore} - Implements the Boyer-Moore substring search algorithm.
+ * From <a href=https://algs4.cs.princeton.edu/home/>Altorithms 4th ed.</a>
+ * by Robert Sedgewick and Kevin Wayne.
+ */
+
 public class BoyerMoore {
 
     private int[] right;
