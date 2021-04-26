@@ -50,7 +50,7 @@ public class KMP_CLRS {
 
     public static void main(String[] args) {
         KMP_CLRS k = new KMP_CLRS();
-        System.out.println("ababaca " + Arrays.toString(k.computePrefix("ababaca")));
+        System.out.println("abcdabeabf " + Arrays.toString(k.computePrefix("abcdabeabf")));
 
         System.out.println("needle " + Arrays.toString(k.computePrefix("needle")));
         k.matcher("haystackneedleina", "needle");
