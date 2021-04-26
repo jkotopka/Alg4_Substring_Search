@@ -39,8 +39,7 @@ public class KMP {
     }
 
     public void printDFA() {
-        System.out.println("DFA:");
-        System.out.printf("%3c", ' ');
+        System.out.printf("DFA:\n%3c", ' ');
         for (char c : pat.toCharArray()) {
             System.out.printf("%3c", c);
         }
