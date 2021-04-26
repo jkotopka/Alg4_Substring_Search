@@ -1,7 +1,7 @@
 package org.kotopka;
 
 /**
- * {@code KMP} - Knuth-Morris-Pratt substring search method from <a href="https://algs4.cs.princeton.edu/home/">Algorithms 4th ed.</a>
+ * {@code KMP} - Knuth-Morris-Pratt substring search method using a Discrete Finite-state Automaton from <a href="https://algs4.cs.princeton.edu/home/">Algorithms 4th ed.</a>
  */
 public class KMP {
 
@@ -38,6 +38,23 @@ public class KMP {
         }
     }
 
+    public void printDFA() {
+        System.out.println("DFA:");
+        System.out.printf("%3c", ' ');
+        for (char c : pat.toCharArray()) {
+            System.out.printf("%3c", c);
+        }
+        System.out.println();
+
+        for (int i = 'A'; i <= 'Z'; i++) {
+            System.out.printf("%3c", (char)i);
+            for (int col : dfa[i]) {
+                System.out.printf("%3d", col);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         String pat = args[0];
         String txt = args[1];
@@ -49,5 +66,7 @@ public class KMP {
             System.out.print(" ");
         }
         System.out.println(pat);
+        System.out.println();
+        kmp.printDFA();
     }
 }
